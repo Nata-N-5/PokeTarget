@@ -97,8 +97,13 @@ const gunMaterial = new THREE.MeshStandardMaterial({
 });
 const gun = new THREE.Mesh(gunGeometry, gunMaterial);
 gun.position.set(0.3, -0.3, -1);
-gun.rotation.y = Math.PI;
-camera.add(gun);
+gun.rotation.y = Math.PI; 
+
+const cameraHolder = new THREE.Group();
+cameraHolder.add(camera);  // cámara dentro del grupo
+scene.add(cameraHolder);   // grupo dentro de la escena
+
+camera.add(gun);         
 
 // Controladores de VR
 const controller1 = renderer.xr.getController(0);
