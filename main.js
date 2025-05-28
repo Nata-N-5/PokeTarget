@@ -1,3 +1,8 @@
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { VRButton } from 'three/addons/webxr/VRButton.js';
+
+
 // Escena, cámara y renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
