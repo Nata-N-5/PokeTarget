@@ -14,7 +14,7 @@ document.body.appendChild(renderer.domElement);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 camera.position.set(0, 1.6, 0); // Estar en el centro, altura promedio humana
 controls.target.set(0, 1.6, 0); // Mira hacia el frente desde esa altura
-controls.update();
+//controls.update();
 
 // Luces
 const light = new THREE.DirectionalLight(0xffffff, 1);
@@ -133,7 +133,7 @@ window.addEventListener("resize", () => {
 
 // Crear la "pistola" como un plano delante de la cámara
 const gunGeometry = new THREE.PlaneGeometry(0.4, 0.4);
-const gunTexture = loader.load('textures/gun.png'); // Asegúrate de tener esta imagen
+const gunTexture = loader.load('/gun.png'); // Asegúrate de tener esta imagen
 const gunMaterial = new THREE.MeshStandardMaterial({
   map: gunTexture,
   transparent: true, // Para que respete la transparencia del PNG
